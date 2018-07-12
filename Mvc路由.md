@@ -151,7 +151,7 @@ http://localhost:54485/my/index?id=10 --匹配my/index并且传入的参数id=10
 
 这样的话对于参数id 来说，不能保证数据安全,假设我想控制id必须为最长为2个长度的数字呢？修改默认路由:
 
-```
+```c#
  routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",
@@ -164,7 +164,7 @@ http://localhost:54485/my/index?id=10 --匹配my/index并且传入的参数id=10
 
 这个路由规则可匹配
 
-```
+```c#
 /my/index/1   --id=1
 /my/index/12   --id=12
 /my/index/123   --显示404
